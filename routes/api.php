@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('getArticles/{page}','articleController@getArticles');
+Route::get('getArticleDetail/{articleId}','articleController@getArticleDetail');
+Route::get('getMedia/{page}','mediaController@getMediaList');
+Route::get('getMediaDetail/{mediaId}','mediaController@getMediaDetail');

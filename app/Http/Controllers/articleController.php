@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class articleController extends Controller
-{
+class articleController extends Controller {
+	
 	private $articles;
 
 	public function __construct() {
@@ -112,10 +112,17 @@ class articleController extends Controller
 		);
 	}
 
-    public function getArticles($page) {
-    	return response()->json(
-            $this->articles,
-            200
-        );
-    }
+	public function getArticles($page) {
+		return response()->json(
+			$this->articles,
+			200
+		);
+	}
+
+	public function getArticleDetail($articleId) {
+		return response()->json(
+			$this->articles[$articleId],
+			200
+		);
+	}
 }
